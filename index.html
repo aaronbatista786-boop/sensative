@@ -3,379 +3,152 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Zensablox</title>
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
 }
 
 body{
-    background:#f5f5f5;
-    color:#111;
+  background:#f7f7f7;
+  color:#111;
 }
 
-/* CONTADOR */
-
-.contador-box{
-    background:#ffd400;
-    text-align:center;
-    padding:25px 10px;
+header{
+  background:#19bff3;
+  padding:25px 10px;
+  text-align:center;
 }
 
-.contador-box p{
-    color:white;
-    font-weight:bold;
-    letter-spacing:2px;
-    font-size:14px;
-    margin-bottom:12px;
+.logo{
+  color:white;
+  font-size:42px;
+  font-weight:900;
+  font-style:italic;
+  text-shadow:3px 3px 0 #111;
 }
 
-#contador{
-    display:inline-block;
-    background:#111;
-    color:#c300ff;
-    font-size:30px;
-    font-weight:bold;
-    padding:12px 28px;
-    border-radius:16px;
-    box-shadow:0 0 25px #c300ff;
-}
-
-/* BOTÓN MENU */
-
-.menu-btn{
-    position:fixed;
-    top:15px;
-    left:15px;
-    z-index:9999;
-    background:white;
-    border:none;
-    border-radius:14px;
-    padding:10px 15px;
-    font-size:25px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.3);
-}
-
-/* MENU */
-
-.menu-lateral{
-    position:fixed;
-    top:0;
-    left:-100%;
-    width:80%;
-    height:100vh;
-    background:linear-gradient(180deg,#1f7bff,#004cff);
-    z-index:9998;
-    padding:35px 25px;
-    transition:0.4s;
-}
-
-.menu-lateral.activo{
-    left:0;
-}
-
-.cerrar-menu{
-    background:none;
-    border:none;
-    font-size:30px;
-    margin-bottom:40px;
-    color:#111;
-}
-
-.menu-lateral a{
-    display:block;
-    text-decoration:none;
-    color:#111;
-    font-size:28px;
-    margin:35px 0;
-}
-
-/* TITULO */
-
-.titulo{
-    text-align:center;
-    padding:30px 20px;
-}
-
-.titulo h1{
-    font-size:38px;
-    color:#111;
-}
-
-/* TARJETAS */
-
-.container{
-    padding:20px;
+main{
+  padding:22px;
 }
 
 .card{
-    background:white;
-    border-radius:22px;
-    overflow:hidden;
-    margin-bottom:30px;
-    box-shadow:0 4px 20px rgba(0,0,0,0.12);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:scale(1.02);
+  background:white;
+  border-radius:22px;
+  margin-bottom:30px;
+  box-shadow:0 5px 18px rgba(0,0,0,.12);
+  overflow:hidden;
 }
 
 .card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
+  width:100%;
+  height:auto;
+  display:block;
 }
 
-.card-content{
-    padding:20px;
+.content{
+  padding:22px;
 }
 
-.card-content h2{
-    margin-bottom:10px;
-    font-size:28px;
+.content h2{
+  font-size:32px;
+  margin-bottom:12px;
 }
 
-.card-content p{
-    color:#555;
-    font-size:17px;
-    line-height:1.5;
+.content p{
+  font-size:22px;
+  color:#555;
+  line-height:1.5;
+  margin-bottom:18px;
 }
 
 .btn{
-    display:inline-block;
-    margin-top:18px;
-    background:#0066ff;
-    color:white;
-    text-decoration:none;
-    padding:12px 22px;
-    border-radius:12px;
-    font-weight:bold;
+  display:inline-block;
+  background:#168cff;
+  color:white;
+  padding:14px 22px;
+  border-radius:12px;
+  text-decoration:none;
+  font-size:20px;
+  font-weight:bold;
 }
 
-/* APARTADOS */
-
-.info-section{
-    background:white;
-    margin:25px;
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 4px 20px rgba(0,0,0,0.1);
-}
-
-.info-section img{
-    width:100%;
-    border-radius:18px;
-    margin-bottom:20px;
-}
-
-.info-section h2{
-    margin-bottom:15px;
-    font-size:32px;
-}
-
-.info-section p{
-    font-size:18px;
-    line-height:1.7;
-    color:#444;
-}
-
-footer{
-    text-align:center;
-    padding:30px;
-    color:#666;
+.menu{
+  position:fixed;
+  left:18px;
+  top:18px;
+  width:45px;
+  height:45px;
+  border-radius:12px;
+  background:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  box-shadow:0 4px 12px rgba(0,0,0,.2);
 }
 </style>
 </head>
 
 <body>
 
-<!-- BOTÓN MENU -->
-<button class="menu-btn" onclick="abrirMenu()">☰</button>
+<div class="menu">☰</div>
 
-<!-- MENU -->
-<div id="menuLateral" class="menu-lateral">
+<header>
+  <div class="logo">Zensablox</div>
+</header>
 
-<button class="cerrar-menu" onclick="cerrarMenu()">× Menu</button>
+<main>
 
-<a href="#inicio" onclick="cerrarMenu()">Inicio</a>
+  <div class="card">
+    <a href="robux.html">
+      <img src="robux.jpeg.jpeg">
+    </a>
+    <div class="content">
+      <h2>Robux Gratis 💰</h2>
+      <p>Aprende métodos seguros para conseguir Robux legalmente sin arriesgar tu cuenta.</p>
+      <a href="robux.html" class="btn">Ver Más</a>
+    </div>
+  </div>
 
-<a href="#freefire" onclick="cerrarMenu()">Free Fire 🎮</a>
+  <div class="card">
+    <a href="eventos.html">
+      <img src="codigos.jpeg">
+    </a>
+    <div class="content">
+      <h2>Códigos y Recompensas 🎁</h2>
+      <p>Revisa códigos promocionales, objetos gratis y recompensas disponibles dentro de Roblox.</p>
+      <a href="eventos.html" class="btn">Ver Más</a>
+    </div>
+  </div>
 
-<a href="#premios" onclick="cerrarMenu()">Premios Gratis 🎁</a>
+  <div class="card">
+    <a href="recompensas.html">
+      <img src="recompensas.jpeg">
+    </a>
+    <div class="content">
+      <h2>Juegos y Eventos Virales 🎮</h2>
+      <p>Descubre juegos populares, novedades, actualizaciones y eventos virales de Roblox.</p>
+      <a href="recompensas.html" class="btn">Ver Más</a>
+    </div>
+  </div>
 
-<a href="#codigos" onclick="cerrarMenu()">Cod 🔴</a>
+  <div class="card">
+    <a href="seguridad.html">
+      <img src="seguridad.jpeg">
+    </a>
+    <div class="content">
+      <h2>Seguridad en Roblox 🔒</h2>
+      <p>Consejos para proteger tu cuenta, evitar estafas y jugar con más seguridad.</p>
+      <a href="seguridad.html" class="btn">Ver Más</a>
+    </div>
+  </div>
 
-<a href="#masjuegos" onclick="cerrarMenu()">Más Juegos 🎮</a>
-
-</div>
-
-<!-- CONTADOR -->
-<div class="contador-box">
-
-<p>TIEMPO TRANSCURRIDO EN EL SITIO</p>
-
-<div id="contador">00:00</div>
-
-</div>
-
-<!-- TITULO -->
-<div class="titulo" id="inicio">
-<h1>Zensablox</h1>
-</div>
-
-<!-- TARJETAS -->
-<div class="container">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop">
-
-<div class="card-content">
-<h2>Free Fire 🎮</h2>
-
-<p>Descubre noticias, eventos y recompensas gratis de Free Fire.</p>
-
-<a href="#freefire" class="btn">Ver Más</a>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop">
-
-<div class="card-content">
-<h2>Premios Gratis 🎁</h2>
-
-<p>Consigue recompensas, skins y premios especiales totalmente gratis.</p>
-
-<a href="#premios" class="btn">Ver Más</a>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop">
-
-<div class="card-content">
-<h2>Códigos 🔴</h2>
-
-<p>Mira códigos nuevos y contenido exclusivo actualizado.</p>
-
-<a href="#codigos" class="btn">Ver Más</a>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=1200&auto=format&fit=crop">
-
-<div class="card-content">
-<h2>Más Juegos 🎮</h2>
-
-<p>Explora nuevos videojuegos y descubre contenido viral.</p>
-
-<a href="#masjuegos" class="btn">Ver Más</a>
-</div>
-</div>
-
-</div>
-
-<!-- APARTADO FREE FIRE -->
-<section class="info-section" id="freefire">
-
-<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop">
-
-<h2>Free Fire 🎮</h2>
-
-<p>
-Aquí encontrarás noticias, eventos especiales, nuevas skins,
-diamantes gratis y mucho contenido relacionado con Free Fire.
-Mantente actualizado con lo último del juego.
-</p>
-
-</section>
-
-<!-- APARTADO PREMIOS -->
-<section class="info-section" id="premios">
-
-<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop">
-
-<h2>Premios Gratis 🎁</h2>
-
-<p>
-Descubre recompensas gratis, sorteos, eventos especiales
-y premios que puedes reclamar fácilmente.
-</p>
-
-</section>
-
-<!-- APARTADO CODIGOS -->
-<section class="info-section" id="codigos">
-
-<img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop">
-
-<h2>Códigos 🔴</h2>
-
-<p>
-Encuentra códigos actualizados y recompensas especiales
-para diferentes videojuegos y eventos exclusivos.
-</p>
-
-</section>
-
-<!-- APARTADO MÁS JUEGOS -->
-<section class="info-section" id="masjuegos">
-
-<img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=1200&auto=format&fit=crop">
-
-<h2>Más Juegos 🎮</h2>
-
-<p>
-Mira contenido viral, recomendaciones y novedades
-de diferentes videojuegos populares.
-</p>
-
-</section>
-
-<footer>
-© 2026 Zensablox
-</footer>
-
-<script>
-/* CONTADOR */
-
-let segundos = 0;
-
-setInterval(() => {
-
-segundos++;
-
-let minutos = Math.floor(segundos / 60);
-
-let seg = segundos % 60;
-
-document.getElementById("contador").textContent =
-String(minutos).padStart(2,"0") + ":" +
-String(seg).padStart(2,"0");
-
-},1000);
-
-/* MENU */
-
-function abrirMenu(){
-document.getElementById("menuLateral").classList.add("activo");
-}
-
-function cerrarMenu(){
-document.getElementById("menuLateral").classList.remove("activo");
-}
-</script>
+</main>
 
 </body>
 </html>
