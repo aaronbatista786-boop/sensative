@@ -33,8 +33,6 @@ header{
   text-shadow:3px 3px 0 #111;
 }
 
-/* CONTADOR */
-
 .counter{
   margin-top:18px;
   display:inline-block;
@@ -130,8 +128,6 @@ main{
   font-size:50px;
   box-shadow:0 6px 18px rgba(0,0,0,.25);
 }
-
-/* FOOTER */
 
 .footer{
   width:100%;
@@ -238,11 +234,39 @@ main{
     <p>Aprende consejos importantes para evitar estafas, proteger tu cuenta y jugar con más seguridad.</p>
   </a>
 
+  <a href="codigo-secreto.html" class="article">
+    <img src="codigo-secreto.jpg" alt="Código secreto Roblox">
+    <h2>Códigos Secretos en Roblox</h2>
+    <p>Aprende cómo identificar códigos reales, promociones oficiales y evitar enlaces falsos que prometen recompensas.</p>
+  </a>
+
+  <a href="nuevos-codigos.html" class="article">
+    <img src="nuevos-codigos.jpg" alt="Nuevos códigos Roblox">
+    <h2>Nuevos Códigos y Promociones</h2>
+    <p>Revisa consejos para encontrar códigos oficiales, eventos activos y recompensas seguras dentro de Roblox.</p>
+  </a>
+
+  <a href="robux-gift.html" class="article">
+    <img src="robux-gift.jpg" alt="Tarjetas y Robux Roblox">
+    <h2>Tarjetas, Gift Cards y Robux</h2>
+    <p>Conoce cómo funcionan las tarjetas de regalo, los métodos oficiales de Robux y las formas seguras de comprar.</p>
+  </a>
+
+  <a href="robux-cuenta.html" class="article">
+    <img src="robux-cuenta.jpg" alt="Robux en cuenta Roblox">
+    <h2>Cómo Cuidar tus Robux y tu Cuenta</h2>
+    <p>Consejos para proteger tu saldo, evitar engaños y mantener tu cuenta segura dentro de Roblox.</p>
+  </a>
+
+  <a href="reclamar-robux.html" class="article">
+    <img src="reclamar-robux.jpg" alt="Recompensas Roblox">
+    <h2>Recompensas y Eventos Oficiales</h2>
+    <p>Aprende a diferenciar eventos reales de páginas falsas y revisa cómo funcionan las recompensas oficiales.</p>
+  </a>
+
 </main>
 
 <div class="menu">☰</div>
-
-<!-- FOOTER -->
 
 <footer class="footer">
 
@@ -302,13 +326,54 @@ function buscar(){
     window.location.href = "seguridad.html";
   }
 
+  else if(
+    texto.includes("secreto") ||
+    texto.includes("codigo secreto") ||
+    texto.includes("código secreto")
+  ){
+    window.location.href = "codigo-secreto.html";
+  }
+
+  else if(
+    texto.includes("nuevos codigos") ||
+    texto.includes("nuevos códigos") ||
+    texto.includes("promocion") ||
+    texto.includes("promoción") ||
+    texto.includes("promociones")
+  ){
+    window.location.href = "nuevos-codigos.html";
+  }
+
+  else if(
+    texto.includes("gift") ||
+    texto.includes("gift card") ||
+    texto.includes("tarjeta") ||
+    texto.includes("tarjetas")
+  ){
+    window.location.href = "robux-gift.html";
+  }
+
+  else if(
+    texto.includes("saldo") ||
+    texto.includes("mis robux") ||
+    texto.includes("robux cuenta")
+  ){
+    window.location.href = "robux-cuenta.html";
+  }
+
+  else if(
+    texto.includes("reclamar") ||
+    texto.includes("oficial") ||
+    texto.includes("oficiales")
+  ){
+    window.location.href = "reclamar-robux.html";
+  }
+
   else{
     alert("No encontramos un apartado relacionado 😅");
   }
 
 }
-
-/* CONTADOR ANIMADO */
 
 let numero = 12548;
 
