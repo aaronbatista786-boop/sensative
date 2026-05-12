@@ -18,33 +18,10 @@ body{
   color:#111;
 }
 
-/* CONTADOR */
-.timer{
-  background:#ffd900;
-  padding:14px;
-  text-align:center;
-  font-weight:bold;
-  color:white;
-  letter-spacing:1px;
-  font-size:15px;
-}
-
-.timer span{
-  display:block;
-  background:#222;
-  color:#ff44ff;
-  width:100px;
-  margin:10px auto 0;
-  padding:10px;
-  border-radius:14px;
-  font-size:28px;
-  font-weight:bold;
-}
-
 /* HEADER */
 header{
   background:#19bff3;
-  padding:25px 10px;
+  padding:25px 10px 30px;
   text-align:center;
   box-shadow:0 4px 15px rgba(0,0,0,.2);
 }
@@ -55,6 +32,29 @@ header{
   color:white;
   font-style:italic;
   text-shadow:3px 3px 0 #111;
+}
+
+/* CONTADOR ACOPLADO */
+.timer{
+  margin-top:18px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  color:white;
+  font-weight:bold;
+  letter-spacing:1px;
+  font-size:15px;
+}
+
+.timer span{
+  margin-top:10px;
+  background:#111;
+  color:#ff4dff;
+  padding:10px 22px;
+  border-radius:14px;
+  font-size:28px;
+  font-weight:bold;
+  box-shadow:0 4px 10px rgba(0,0,0,.25);
 }
 
 main{
@@ -128,7 +128,7 @@ main{
   color:#333;
 }
 
-/* BOTÓN MENÚ ABAJO DERECHA */
+/* BOTÓN MENÚ */
 .menu-btn{
   position:fixed;
   right:25px;
@@ -146,7 +146,7 @@ main{
   cursor:pointer;
 }
 
-/* CAJA DEL MENÚ */
+/* MENÚ */
 .menu-box{
   position:fixed;
   right:20px;
@@ -186,6 +186,7 @@ main{
 }
 
 @media (max-width:480px){
+
   .logo{
     font-size:40px;
   }
@@ -211,13 +212,15 @@ main{
 
 <body>
 
-<div class="timer">
-TIEMPO TRANSCURRIDO EN EL SITIO
-<span id="contador">00:00</span>
-</div>
-
 <header>
+
   <div class="logo">Zensablox</div>
+
+  <div class="timer">
+    <div>Tiempo en el sitio</div>
+    <span id="contador">00:00</span>
+  </div>
+
 </header>
 
 <main>
@@ -254,6 +257,7 @@ TIEMPO TRANSCURRIDO EN EL SITIO
 </main>
 
 <div class="menu-box" id="menuBox">
+
   <h3>Menú de Apartados</h3>
 
   <a href="robux.html">
@@ -263,26 +267,29 @@ TIEMPO TRANSCURRIDO EN EL SITIO
 
   <a href="eventos.html">
     🎁 Códigos y Recompensas
-    <span>Códigos promocionales, objetos gratis y recompensas.</span>
+    <span>Códigos promocionales y recompensas.</span>
   </a>
 
   <a href="recompensas.html">
     🎮 Juegos y Eventos
-    <span>Novedades, juegos populares y eventos virales.</span>
+    <span>Eventos virales y juegos populares.</span>
   </a>
 
   <a href="seguridad.html">
     🔒 Seguridad
     <span>Protege tu cuenta y evita estafas.</span>
   </a>
+
 </div>
 
 <div class="menu-btn" onclick="abrirMenu()">☰</div>
 
 <script>
+
 let segundos = 0;
 
 setInterval(function(){
+
   segundos++;
 
   let minutos = Math.floor(segundos / 60);
@@ -290,9 +297,11 @@ setInterval(function(){
 
   document.getElementById("contador").textContent =
   String(minutos).padStart(2,'0') + ":" + String(secs).padStart(2,'0');
+
 },1000);
 
 function abrirMenu(){
+
   let menu = document.getElementById("menuBox");
 
   if(menu.style.display === "block"){
@@ -303,24 +312,42 @@ function abrirMenu(){
 }
 
 function buscar(){
+
   let texto = document.getElementById("buscador").value.toLowerCase();
 
-  if(texto.includes("robux") || texto.includes("roblox gratis")){
+  if(texto.includes("robux") || texto.includes("gratis")){
     window.location.href = "robux.html";
   }
-  else if(texto.includes("codigo") || texto.includes("código") || texto.includes("codigos") || texto.includes("códigos") || texto.includes("recompensa") || texto.includes("recompensas")){
+
+  else if(
+    texto.includes("codigo") ||
+    texto.includes("código") ||
+    texto.includes("recompensa")
+  ){
     window.location.href = "eventos.html";
   }
-  else if(texto.includes("evento") || texto.includes("eventos") || texto.includes("juego") || texto.includes("juegos") || texto.includes("viral") || texto.includes("virales")){
+
+  else if(
+    texto.includes("evento") ||
+    texto.includes("juego") ||
+    texto.includes("viral")
+  ){
     window.location.href = "recompensas.html";
   }
-  else if(texto.includes("seguridad") || texto.includes("hack") || texto.includes("hacker") || texto.includes("cuenta") || texto.includes("proteger")){
+
+  else if(
+    texto.includes("seguridad") ||
+    texto.includes("hack") ||
+    texto.includes("cuenta")
+  ){
     window.location.href = "seguridad.html";
   }
+
   else{
     alert("No encontramos un apartado relacionado 😅");
   }
 }
+
 </script>
 
 </body>
