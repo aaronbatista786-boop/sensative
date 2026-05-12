@@ -46,10 +46,28 @@ main{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  font-size:30px;
-  color:#777;
   margin-bottom:45px;
   border:2px solid #ddd;
+}
+
+.search input{
+  border:none;
+  outline:none;
+  background:none;
+  font-size:30px;
+  width:80%;
+  color:#333;
+}
+
+.search input::placeholder{
+  color:#777;
+}
+
+.search button{
+  border:none;
+  background:none;
+  font-size:35px;
+  cursor:pointer;
 }
 
 .article{
@@ -128,8 +146,8 @@ main{
 <main>
 
   <div class="search">
-    <span>Buscar</span>
-    <span>🔎</span>
+    <input type="text" id="buscador" placeholder="Buscar" onkeydown="if(event.key==='Enter'){buscar()}">
+    <button onclick="buscar()">🔎</button>
   </div>
 
   <a href="robux.html" class="article">
@@ -159,6 +177,28 @@ main{
 </main>
 
 <div class="menu">☰</div>
+
+<script>
+function buscar(){
+  let texto = document.getElementById("buscador").value.toLowerCase();
+
+  if(texto.includes("robux") || texto.includes("roblox gratis")){
+    window.location.href = "robux.html";
+  }
+  else if(texto.includes("codigo") || texto.includes("código") || texto.includes("codigos") || texto.includes("códigos") || texto.includes("recompensa") || texto.includes("recompensas")){
+    window.location.href = "eventos.html";
+  }
+  else if(texto.includes("evento") || texto.includes("eventos") || texto.includes("juego") || texto.includes("juegos") || texto.includes("viral") || texto.includes("virales")){
+    window.location.href = "recompensas.html";
+  }
+  else if(texto.includes("seguridad") || texto.includes("hack") || texto.includes("hacker") || texto.includes("cuenta") || texto.includes("proteger")){
+    window.location.href = "seguridad.html";
+  }
+  else{
+    alert("No encontramos un apartado relacionado 😅");
+  }
+}
+</script>
 
 </body>
 </html>
