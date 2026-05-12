@@ -3,200 +3,377 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Zensablox</title>
 
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-  background:#f3f3f3;
-  color:#111;
+    background:#f5f5f5;
+    color:#111;
 }
 
-header{
-  background:#19bff3;
-  padding:25px 10px;
-  text-align:center;
-  box-shadow:0 4px 15px rgba(0,0,0,.2);
+/* CONTADOR */
+
+.contador-box{
+    background:#ffd400;
+    text-align:center;
+    padding:25px 10px;
 }
 
-.logo{
-  font-size:42px;
-  font-weight:900;
-  color:white;
-  font-style:italic;
-  text-shadow:3px 3px 0 #111;
+.contador-box p{
+    color:white;
+    font-weight:bold;
+    letter-spacing:2px;
+    font-size:14px;
+    margin-bottom:12px;
 }
 
-main{
-  padding:22px;
+#contador{
+    display:inline-block;
+    background:#111;
+    color:#c300ff;
+    font-size:30px;
+    font-weight:bold;
+    padding:12px 28px;
+    border-radius:16px;
+    box-shadow:0 0 25px #c300ff;
 }
 
-.search{
-  width:100%;
-  height:75px;
-  background:white;
-  border-radius:45px;
-  padding:0 28px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:45px;
-  border:2px solid #ddd;
+/* BOTÓN MENU */
+
+.menu-btn{
+    position:fixed;
+    top:15px;
+    left:15px;
+    z-index:9999;
+    background:white;
+    border:none;
+    border-radius:14px;
+    padding:10px 15px;
+    font-size:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
 }
 
-.search input{
-  border:none;
-  outline:none;
-  background:none;
-  font-size:30px;
-  width:80%;
-  color:#333;
+/* MENU */
+
+.menu-lateral{
+    position:fixed;
+    top:0;
+    left:-100%;
+    width:80%;
+    height:100vh;
+    background:linear-gradient(180deg,#1f7bff,#004cff);
+    z-index:9998;
+    padding:35px 25px;
+    transition:0.4s;
 }
 
-.search input::placeholder{
-  color:#777;
+.menu-lateral.activo{
+    left:0;
 }
 
-.search button{
-  border:none;
-  background:none;
-  font-size:35px;
-  cursor:pointer;
+.cerrar-menu{
+    background:none;
+    border:none;
+    font-size:30px;
+    margin-bottom:40px;
+    color:#111;
 }
 
-.article{
-  display:block;
-  background:white;
-  padding:14px;
-  border-radius:24px;
-  margin-bottom:35px;
-  box-shadow:0 4px 12px rgba(0,0,0,.10);
-  text-decoration:none;
-  color:inherit;
+.menu-lateral a{
+    display:block;
+    text-decoration:none;
+    color:#111;
+    font-size:28px;
+    margin:35px 0;
 }
 
-.article img{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:20px;
-  margin-bottom:20px;
+/* TITULO */
+
+.titulo{
+    text-align:center;
+    padding:30px 20px;
 }
 
-.article h2{
-  font-size:34px;
-  line-height:1.15;
-  font-weight:900;
-  margin-bottom:15px;
+.titulo h1{
+    font-size:38px;
+    color:#111;
 }
 
-.article p{
-  font-size:23px;
-  line-height:1.45;
-  color:#333;
+/* TARJETAS */
+
+.container{
+    padding:20px;
 }
 
-.menu{
-  position:fixed;
-  right:25px;
-  bottom:25px;
-  width:88px;
-  height:88px;
-  border-radius:50%;
-  background:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:50px;
-  box-shadow:0 6px 18px rgba(0,0,0,.25);
+.card{
+    background:white;
+    border-radius:22px;
+    overflow:hidden;
+    margin-bottom:30px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.12);
+    transition:0.3s;
 }
 
-@media (max-width:480px){
-  .logo{
-    font-size:40px;
-  }
+.card:hover{
+    transform:scale(1.02);
+}
 
-  main{
-    padding:18px;
-  }
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
 
-  .article h2{
+.card-content{
+    padding:20px;
+}
+
+.card-content h2{
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.card-content p{
+    color:#555;
+    font-size:17px;
+    line-height:1.5;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:18px;
+    background:#0066ff;
+    color:white;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+/* APARTADOS */
+
+.info-section{
+    background:white;
+    margin:25px;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.1);
+}
+
+.info-section img{
+    width:100%;
+    border-radius:18px;
+    margin-bottom:20px;
+}
+
+.info-section h2{
+    margin-bottom:15px;
     font-size:32px;
-  }
+}
 
-  .article p{
-    font-size:22px;
-  }
+.info-section p{
+    font-size:18px;
+    line-height:1.7;
+    color:#444;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#666;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">Zensablox</div>
-</header>
+<!-- BOTÓN MENU -->
+<button class="menu-btn" onclick="abrirMenu()">☰</button>
 
-<main>
+<!-- MENU -->
+<div id="menuLateral" class="menu-lateral">
 
-  <div class="search">
-    <input type="text" id="buscador" placeholder="Buscar" onkeydown="if(event.key==='Enter'){buscar()}">
-    <button onclick="buscar()">🔎</button>
-  </div>
+<button class="cerrar-menu" onclick="cerrarMenu()">× Menu</button>
 
-  <a href="robux.html" class="article">
-    <img src="robux.jpeg.jpeg" alt="Robux gratis Roblox">
-    <h2>Cómo Conseguir Robux Gratis en Roblox Legalmente</h2>
-    <p>¿Quieres Robux sin arriesgar tu cuenta? Mira esta guía con métodos seguros, eventos oficiales y recompensas reales dentro de Roblox.</p>
-  </a>
+<a href="#inicio" onclick="cerrarMenu()">Inicio</a>
 
-  <a href="eventos.html" class="article">
-    <img src="codigos.jpeg" alt="Códigos Roblox">
-    <h2>Códigos y Recompensas Disponibles en Roblox</h2>
-    <p>Lista actualizada de códigos promocionales, objetos gratis y recompensas que puedes revisar dentro de Roblox.</p>
-  </a>
+<a href="#freefire" onclick="cerrarMenu()">Free Fire 🎮</a>
 
-  <a href="recompensas.html" class="article">
-    <img src="recompensas.jpeg" alt="Juegos y eventos Roblox">
-    <h2>Juegos y Eventos Virales de Roblox</h2>
-    <p>Descubre juegos populares, novedades, actualizaciones y eventos virales que están llamando la atención en la comunidad.</p>
-  </a>
+<a href="#premios" onclick="cerrarMenu()">Premios Gratis 🎁</a>
 
-  <a href="seguridad.html" class="article">
-    <img src="seguridad.jpeg" alt="Seguridad Roblox">
-    <h2>Cómo Proteger tu Cuenta de Roblox</h2>
-    <p>Aprende consejos importantes para evitar estafas, proteger tu cuenta y jugar con más seguridad.</p>
-  </a>
+<a href="#codigos" onclick="cerrarMenu()">Cod 🔴</a>
 
-</main>
+<a href="#masjuegos" onclick="cerrarMenu()">Más Juegos 🎮</a>
 
-<div class="menu">☰</div>
+</div>
+
+<!-- CONTADOR -->
+<div class="contador-box">
+
+<p>TIEMPO TRANSCURRIDO EN EL SITIO</p>
+
+<div id="contador">00:00</div>
+
+</div>
+
+<!-- TITULO -->
+<div class="titulo" id="inicio">
+<h1>Zensablox</h1>
+</div>
+
+<!-- TARJETAS -->
+<div class="container">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h2>Free Fire 🎮</h2>
+
+<p>Descubre noticias, eventos y recompensas gratis de Free Fire.</p>
+
+<a href="#freefire" class="btn">Ver Más</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h2>Premios Gratis 🎁</h2>
+
+<p>Consigue recompensas, skins y premios especiales totalmente gratis.</p>
+
+<a href="#premios" class="btn">Ver Más</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h2>Códigos 🔴</h2>
+
+<p>Mira códigos nuevos y contenido exclusivo actualizado.</p>
+
+<a href="#codigos" class="btn">Ver Más</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+<h2>Más Juegos 🎮</h2>
+
+<p>Explora nuevos videojuegos y descubre contenido viral.</p>
+
+<a href="#masjuegos" class="btn">Ver Más</a>
+</div>
+</div>
+
+</div>
+
+<!-- APARTADO FREE FIRE -->
+<section class="info-section" id="freefire">
+
+<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop">
+
+<h2>Free Fire 🎮</h2>
+
+<p>
+Aquí encontrarás noticias, eventos especiales, nuevas skins,
+diamantes gratis y mucho contenido relacionado con Free Fire.
+Mantente actualizado con lo último del juego.
+</p>
+
+</section>
+
+<!-- APARTADO PREMIOS -->
+<section class="info-section" id="premios">
+
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop">
+
+<h2>Premios Gratis 🎁</h2>
+
+<p>
+Descubre recompensas gratis, sorteos, eventos especiales
+y premios que puedes reclamar fácilmente.
+</p>
+
+</section>
+
+<!-- APARTADO CODIGOS -->
+<section class="info-section" id="codigos">
+
+<img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop">
+
+<h2>Códigos 🔴</h2>
+
+<p>
+Encuentra códigos actualizados y recompensas especiales
+para diferentes videojuegos y eventos exclusivos.
+</p>
+
+</section>
+
+<!-- APARTADO MÁS JUEGOS -->
+<section class="info-section" id="masjuegos">
+
+<img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=1200&auto=format&fit=crop">
+
+<h2>Más Juegos 🎮</h2>
+
+<p>
+Mira contenido viral, recomendaciones y novedades
+de diferentes videojuegos populares.
+</p>
+
+</section>
+
+<footer>
+© 2026 Zensablox
+</footer>
 
 <script>
-function buscar(){
-  let texto = document.getElementById("buscador").value.toLowerCase();
+/* CONTADOR */
 
-  if(texto.includes("robux") || texto.includes("roblox gratis")){
-    window.location.href = "robux.html";
-  }
-  else if(texto.includes("codigo") || texto.includes("código") || texto.includes("codigos") || texto.includes("códigos") || texto.includes("recompensa") || texto.includes("recompensas")){
-    window.location.href = "eventos.html";
-  }
-  else if(texto.includes("evento") || texto.includes("eventos") || texto.includes("juego") || texto.includes("juegos") || texto.includes("viral") || texto.includes("virales")){
-    window.location.href = "recompensas.html";
-  }
-  else if(texto.includes("seguridad") || texto.includes("hack") || texto.includes("hacker") || texto.includes("cuenta") || texto.includes("proteger")){
-    window.location.href = "seguridad.html";
-  }
-  else{
-    alert("No encontramos un apartado relacionado 😅");
-  }
+let segundos = 0;
+
+setInterval(() => {
+
+segundos++;
+
+let minutos = Math.floor(segundos / 60);
+
+let seg = segundos % 60;
+
+document.getElementById("contador").textContent =
+String(minutos).padStart(2,"0") + ":" +
+String(seg).padStart(2,"0");
+
+},1000);
+
+/* MENU */
+
+function abrirMenu(){
+document.getElementById("menuLateral").classList.add("activo");
+}
+
+function cerrarMenu(){
+document.getElementById("menuLateral").classList.remove("activo");
 }
 </script>
 
