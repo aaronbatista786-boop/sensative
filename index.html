@@ -3,58 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sensative</title>
+<title>Sensative Roblox</title>
 
 <style>
 body{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#0f0f0f;
+    font-family:Arial,sans-serif;
+    background:#0f172a;
     color:white;
-    text-align:center;
 }
 
 header{
-    padding:60px 20px;
-    background:linear-gradient(135deg,#00ff88,#006644);
+    background:#111827;
+    padding:20px;
+    text-align:center;
+    border-bottom:3px solid #00ff88;
 }
 
-h1{
-    font-size:55px;
+header h1{
     margin:0;
+    font-size:45px;
+    color:#00ff88;
 }
 
-p{
-    font-size:20px;
+header p{
+    color:#ccc;
 }
 
 .container{
-    padding:40px 20px;
+    max-width:1200px;
+    margin:auto;
+    padding:30px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
 .card{
-    background:#1c1c1c;
-    margin:20px auto;
-    padding:25px;
+    background:#1e293b;
     border-radius:20px;
-    max-width:500px;
+    overflow:hidden;
     transition:0.3s;
+    text-decoration:none;
+    color:white;
 }
 
 .card:hover{
     transform:scale(1.03);
 }
 
-a{
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h2{
+    margin-top:0;
     color:#00ff88;
-    text-decoration:none;
-    font-weight:bold;
 }
 
 footer{
-    margin-top:40px;
+    margin-top:50px;
+    background:#111827;
     padding:20px;
-    background:#111;
+    text-align:center;
+    color:#aaa;
 }
 </style>
 </head>
@@ -62,31 +83,60 @@ footer{
 <body>
 
 <header>
-    <h1>Sensative</h1>
-    <p>Gaming • Roblox • Noticias • Guías</p>
+<h1>Sensative</h1>
+<p>Noticias y guías de Roblox</p>
 </header>
 
 <div class="container">
 
-<div class="card">
-    <h2>Roblox</h2>
-    <p>Noticias y eventos de Roblox actualizados.</p>
-</div>
+<div class="grid">
 
-<div class="card">
-    <h2>Free Fire</h2>
-    <p>Sensibilidades, configuraciones y más.</p>
+<a class="card" href="robux.html">
+<img src="https://tr.rbxcdn.com/180DAY-1b4b6c3f4f6d7dcbf9c49a6d2d5d9c9a/768/432/Image/Webp/noFilter">
+<div class="card-content">
+<h2>Cómo conseguir Robux</h2>
+<p>Descubre métodos y eventos populares dentro de Roblox.</p>
 </div>
+</a>
 
-<div class="card">
-    <h2>TikTok</h2>
-    <p>Contenido viral y tendencias.</p>
+<a class="card" href="eventos.html">
+<img src="https://images.rbxcdn.com/8b8685545853abd897ffc8c93bd1160f-event_default_illustration.jpeg">
+<div class="card-content">
+<h2>Eventos Roblox</h2>
+<p>Los eventos más recientes y recompensas disponibles.</p>
+</div>
+</a>
+
+<a class="card" href="codigos.html">
+<img src="https://i.ytimg.com/vi/r4H6i6XoWlY/maxresdefault.jpg">
+<div class="card-content">
+<h2>Códigos y recompensas</h2>
+<p>Lista de códigos promocionales y objetos gratis.</p>
+</div>
+</a>
+
+<a class="card" href="actualizaciones.html">
+<img src="https://images.rbxcdn.com/6b8b5f8d4f6f9e2fbc7e4f2d4d8e7a1d.png">
+<div class="card-content">
+<h2>Actualizaciones</h2>
+<p>Nuevas funciones y cambios dentro de Roblox.</p>
+</div>
+</a>
+
+<a class="card" href="seguridad.html">
+<img src="https://i.ytimg.com/vi/4H1W7L6m2iA/maxresdefault.jpg">
+<div class="card-content">
+<h2>Seguridad Roblox</h2>
+<p>Consejos para proteger tu cuenta y evitar estafas.</p>
+</div>
+</a>
+
 </div>
 
 </div>
 
 <footer>
-© 2026 Sensative
+© 2026 Sensative - Roblox News
 </footer>
 
 </body>
