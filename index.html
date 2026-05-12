@@ -6,149 +6,356 @@
 <title>Zensablox</title>
 
 <style>
+
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
 body{
-  background:#f7f7f7;
-  color:#111;
+background:#f7f7f7;
+color:#111;
 }
 
+/* CONTADOR */
+
+.timer{
+background:#ffd900;
+padding:14px;
+text-align:center;
+font-weight:bold;
+color:white;
+letter-spacing:1px;
+font-size:15px;
+}
+
+.timer span{
+display:block;
+background:#222;
+color:#ff44ff;
+width:100px;
+margin:10px auto 0;
+padding:10px;
+border-radius:14px;
+font-size:28px;
+font-weight:bold;
+}
+
+/* HEADER */
+
 header{
-  background:#19bff3;
-  padding:25px 10px;
-  text-align:center;
+background:#19bff3;
+padding:30px 10px;
+text-align:center;
+box-shadow:0 4px 15px rgba(0,0,0,.2);
 }
 
 .logo{
-  color:white;
-  font-size:42px;
-  font-weight:900;
-  font-style:italic;
-  text-shadow:3px 3px 0 #111;
+font-size:48px;
+font-weight:900;
+color:white;
+font-style:italic;
+text-shadow:4px 4px 0 #111;
 }
 
+/* CONTENIDO */
+
 main{
-  padding:22px;
+padding:22px;
 }
 
 .card{
-  background:white;
-  border-radius:22px;
-  margin-bottom:30px;
-  box-shadow:0 5px 18px rgba(0,0,0,.12);
-  overflow:hidden;
+background:white;
+border-radius:24px;
+margin-bottom:35px;
+overflow:hidden;
+box-shadow:0 5px 18px rgba(0,0,0,.12);
 }
 
 .card img{
-  width:100%;
-  height:auto;
-  display:block;
+width:100%;
+display:block;
 }
 
 .content{
-  padding:22px;
+padding:22px;
 }
 
 .content h2{
-  font-size:32px;
-  margin-bottom:12px;
+font-size:34px;
+margin-bottom:15px;
+line-height:1.15;
 }
 
 .content p{
-  font-size:22px;
-  color:#555;
-  line-height:1.5;
-  margin-bottom:18px;
+font-size:22px;
+line-height:1.5;
+color:#555;
+margin-bottom:20px;
 }
 
 .btn{
-  display:inline-block;
-  background:#168cff;
-  color:white;
-  padding:14px 22px;
-  border-radius:12px;
-  text-decoration:none;
-  font-size:20px;
-  font-weight:bold;
+display:inline-block;
+background:#168cff;
+color:white;
+padding:14px 24px;
+border-radius:14px;
+text-decoration:none;
+font-size:21px;
+font-weight:bold;
 }
 
-.menu{
-  position:fixed;
-  left:18px;
-  top:18px;
-  width:45px;
-  height:45px;
-  border-radius:12px;
-  background:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:25px;
-  box-shadow:0 4px 12px rgba(0,0,0,.2);
+/* BOTÓN MENÚ */
+
+.menu-btn{
+position:fixed;
+right:25px;
+bottom:25px;
+width:88px;
+height:88px;
+border-radius:50%;
+background:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:52px;
+box-shadow:0 6px 18px rgba(0,0,0,.25);
+z-index:999;
+cursor:pointer;
 }
+
+/* MENÚ DESPLEGABLE */
+
+.menu-box{
+position:fixed;
+right:20px;
+bottom:125px;
+width:310px;
+background:white;
+border-radius:22px;
+padding:20px;
+box-shadow:0 6px 25px rgba(0,0,0,.25);
+display:none;
+z-index:998;
+}
+
+.menu-box h3{
+font-size:26px;
+margin-bottom:18px;
+}
+
+.menu-box a{
+display:block;
+text-decoration:none;
+color:#111;
+background:#f3f3f3;
+padding:14px;
+border-radius:14px;
+margin-bottom:12px;
+font-size:18px;
+font-weight:bold;
+}
+
+.menu-box a span{
+display:block;
+font-size:15px;
+color:#555;
+margin-top:5px;
+font-weight:normal;
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="menu">☰</div>
+<!-- CONTADOR -->
+
+<div class="timer">
+TIEMPO TRANSCURRIDO EN EL SITIO
+<span id="contador">00:00</span>
+</div>
+
+<!-- HEADER -->
 
 <header>
-  <div class="logo">Zensablox</div>
+<div class="logo">Zensablox</div>
 </header>
+
+<!-- CONTENIDO -->
 
 <main>
 
-  <div class="card">
-    <a href="robux.html">
-      <img src="robux.jpeg.jpeg">
-    </a>
-    <div class="content">
-      <h2>Robux Gratis 💰</h2>
-      <p>Aprende métodos seguros para conseguir Robux legalmente sin arriesgar tu cuenta.</p>
-      <a href="robux.html" class="btn">Ver Más</a>
-    </div>
-  </div>
+<!-- ROBUX -->
 
-  <div class="card">
-    <a href="eventos.html">
-      <img src="codigos.jpeg">
-    </a>
-    <div class="content">
-      <h2>Códigos y Recompensas 🎁</h2>
-      <p>Revisa códigos promocionales, objetos gratis y recompensas disponibles dentro de Roblox.</p>
-      <a href="eventos.html" class="btn">Ver Más</a>
-    </div>
-  </div>
+<div class="card">
 
-  <div class="card">
-    <a href="recompensas.html">
-      <img src="recompensas.jpeg">
-    </a>
-    <div class="content">
-      <h2>Juegos y Eventos Virales 🎮</h2>
-      <p>Descubre juegos populares, novedades, actualizaciones y eventos virales de Roblox.</p>
-      <a href="recompensas.html" class="btn">Ver Más</a>
-    </div>
-  </div>
+<a href="robux.html">
+<img src="robux.jpeg.jpeg">
+</a>
 
-  <div class="card">
-    <a href="seguridad.html">
-      <img src="seguridad.jpeg">
-    </a>
-    <div class="content">
-      <h2>Seguridad en Roblox 🔒</h2>
-      <p>Consejos para proteger tu cuenta, evitar estafas y jugar con más seguridad.</p>
-      <a href="seguridad.html" class="btn">Ver Más</a>
-    </div>
-  </div>
+<div class="content">
+
+<h2>Robux Gratis 💰</h2>
+
+<p>
+Aprende métodos seguros para conseguir Robux legalmente sin arriesgar tu cuenta.
+</p>
+
+<a href="robux.html" class="btn">
+Ver Más
+</a>
+
+</div>
+</div>
+
+<!-- CODIGOS -->
+
+<div class="card">
+
+<a href="eventos.html">
+<img src="codigos.jpeg">
+</a>
+
+<div class="content">
+
+<h2>Códigos y Recompensas 🎁</h2>
+
+<p>
+Revisa códigos promocionales, objetos gratis y recompensas disponibles dentro de Roblox.
+</p>
+
+<a href="eventos.html" class="btn">
+Ver Más
+</a>
+
+</div>
+</div>
+
+<!-- EVENTOS -->
+
+<div class="card">
+
+<a href="recompensas.html">
+<img src="recompensas.jpeg">
+</a>
+
+<div class="content">
+
+<h2>Juegos y Eventos Virales 🎮</h2>
+
+<p>
+Descubre juegos populares, novedades, actualizaciones y eventos virales de Roblox.
+</p>
+
+<a href="recompensas.html" class="btn">
+Ver Más
+</a>
+
+</div>
+</div>
+
+<!-- SEGURIDAD -->
+
+<div class="card">
+
+<a href="seguridad.html">
+<img src="seguridad.jpeg">
+</a>
+
+<div class="content">
+
+<h2>Seguridad en Roblox 🔒</h2>
+
+<p>
+Consejos para proteger tu cuenta, evitar estafas y jugar con más seguridad.
+</p>
+
+<a href="seguridad.html" class="btn">
+Ver Más
+</a>
+
+</div>
+</div>
 
 </main>
+
+<!-- MENÚ -->
+
+<div class="menu-box" id="menuBox">
+
+<h3>Menú de Apartados</h3>
+
+<a href="robux.html">
+💰 Robux Gratis
+<span>Métodos seguros y legales.</span>
+</a>
+
+<a href="eventos.html">
+🎁 Códigos y Recompensas
+<span>Objetos gratis y códigos promocionales.</span>
+</a>
+
+<a href="recompensas.html">
+🎮 Juegos y Eventos
+<span>Novedades y juegos virales de Roblox.</span>
+</a>
+
+<a href="seguridad.html">
+🔒 Seguridad
+<span>Protege tu cuenta y evita estafas.</span>
+</a>
+
+</div>
+
+<!-- BOTÓN -->
+
+<div class="menu-btn" onclick="abrirMenu()">
+☰
+</div>
+
+<!-- SCRIPT -->
+
+<script>
+
+/* CONTADOR */
+
+let segundos = 0;
+
+setInterval(function(){
+
+segundos++;
+
+let minutos = Math.floor(segundos / 60);
+let secs = segundos % 60;
+
+document.getElementById("contador").textContent =
+String(minutos).padStart(2,'0') + ":" +
+String(secs).padStart(2,'0');
+
+},1000);
+
+/* MENÚ */
+
+function abrirMenu(){
+
+let menu = document.getElementById("menuBox");
+
+if(menu.style.display === "block"){
+
+menu.style.display = "none";
+
+}else{
+
+menu.style.display = "block";
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
