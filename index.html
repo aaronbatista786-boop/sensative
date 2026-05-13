@@ -141,6 +141,42 @@ main{
   color:#333;
 }
 
+.related{
+  background:white;
+  padding:24px;
+  border-radius:24px;
+  margin-top:40px;
+  box-shadow:0 4px 12px rgba(0,0,0,.10);
+}
+
+.related h3{
+  font-size:clamp(24px, 4vw, 32px);
+  margin-bottom:18px;
+}
+
+.related-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+  gap:16px;
+}
+
+.related a{
+  display:block;
+  background:#f3f3f3;
+  padding:16px;
+  border-radius:18px;
+  text-decoration:none;
+  color:#111;
+  font-size:18px;
+  font-weight:bold;
+  transition:.2s;
+}
+
+.related a:hover{
+  background:#19bff3;
+  color:white;
+}
+
 .menu{
   position:fixed;
   right:18px;
@@ -317,6 +353,10 @@ main{
     border-radius:16px;
   }
 
+  .related{
+    padding:18px;
+  }
+
   .menu{
     width:62px;
     height:62px;
@@ -373,60 +413,77 @@ onkeydown="if(event.key==='Enter'){buscar()}"
 <div class="articles-grid">
 
 <a href="robux.html" class="article">
-<img src="robux.jpeg.jpeg" alt="Robux Roblox">
+<img loading="lazy" src="robux.jpeg.jpeg" alt="Robux Roblox">
 <h2>Cómo Conseguir Robux Gratis en Roblox Legalmente</h2>
 <p>Descubre métodos seguros, recompensas oficiales y consejos reales dentro de Roblox.</p>
 </a>
 
 <a href="eventos.html" class="article">
-<img src="codigos.jpeg" alt="Códigos Roblox">
+<img loading="lazy" src="codigos.jpeg" alt="Códigos Roblox">
 <h2>Códigos y Recompensas Disponibles en Roblox</h2>
 <p>Revisa códigos promocionales, objetos gratis y recompensas activas.</p>
 </a>
 
 <a href="recompensas.html" class="article">
-<img src="recompensas.jpeg" alt="Eventos Roblox">
+<img loading="lazy" src="recompensas.jpeg" alt="Eventos Roblox">
 <h2>Juegos y Eventos Virales de Roblox</h2>
 <p>Conoce los juegos más populares y eventos virales de la comunidad.</p>
 </a>
 
 <a href="seguridad.html" class="article">
-<img src="seguridad.jpeg" alt="Seguridad Roblox">
+<img loading="lazy" src="seguridad.jpeg" alt="Seguridad Roblox">
 <h2>Cómo Proteger tu Cuenta de Roblox</h2>
 <p>Consejos importantes para mantener tu cuenta segura y evitar estafas.</p>
 </a>
 
 <a href="codigo-secreto.html" class="article">
-<img src="codigo-secreto.jpeg" alt="Código secreto Roblox">
+<img loading="lazy" src="codigo-secreto.jpeg" alt="Código secreto Roblox">
 <h2>Códigos Secretos en Roblox</h2>
 <p>Aprende cómo reconocer promociones oficiales y evitar páginas falsas.</p>
 </a>
 
 <a href="nuevos-codigos.html" class="article">
-<img src="nuevos-codigos.jpeg" alt="Nuevos códigos Roblox">
+<img loading="lazy" src="nuevos-codigos.jpeg" alt="Nuevos códigos Roblox">
 <h2>Nuevos Códigos y Promociones</h2>
 <p>Encuentra información sobre eventos activos y promociones seguras.</p>
 </a>
 
 <a href="robux-gift.html" class="article">
-<img src="robux-gift.jpeg" alt="Gift cards Roblox">
+<img loading="lazy" src="robux-gift.jpeg" alt="Gift cards Roblox">
 <h2>Tarjetas, Gift Cards y Robux</h2>
 <p>Conoce cómo funcionan las tarjetas oficiales y métodos seguros.</p>
 </a>
 
 <a href="robux-cuenta.html" class="article">
-<img src="robux-cuenta.jpeg" alt="Cuidar cuenta Roblox">
+<img loading="lazy" src="robux-cuenta.jpeg" alt="Cuidar cuenta Roblox">
 <h2>Cómo Cuidar tus Robux y tu Cuenta</h2>
 <p>Protege tu saldo y evita engaños comunes en Roblox.</p>
 </a>
 
 <a href="reclamar-robux.html" class="article">
-<img src="reclamar-robux.jpeg" alt="Recompensas oficiales Roblox">
+<img loading="lazy" src="reclamar-robux.jpeg" alt="Recompensas oficiales Roblox">
 <h2>Recompensas y Eventos Oficiales</h2>
 <p>Aprende a identificar eventos oficiales y páginas confiables.</p>
 </a>
 
 </div>
+
+<section class="related">
+
+<h3>También te puede interesar</h3>
+
+<div class="related-grid">
+
+<a href="seguridad.html">🔐 Aprende a proteger tu cuenta de Roblox</a>
+<a href="eventos.html">🎁 Revisa códigos y recompensas disponibles</a>
+<a href="robux-gift.html">💳 Guía sobre Gift Cards y Robux</a>
+<a href="recompensas.html">🔥 Mira eventos virales de Roblox</a>
+<a href="codigo-secreto.html">🧩 Cómo detectar códigos falsos</a>
+<a href="nuevos-codigos.html">⭐ Nuevas promociones seguras</a>
+
+</div>
+
+</section>
 
 </main>
 
