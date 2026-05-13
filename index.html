@@ -1,4 +1,5 @@
- <!DOCTYPE html>
+ 
+<!DOCTYPE html>
 <html lang="es">
 <head>
 
@@ -321,6 +322,213 @@ main{
   transform:scale(1.05);
 }
 
+
+.dark-toggle{
+  position:fixed;
+  left:18px;
+  bottom:18px;
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  border:none;
+  background:#15172d;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:32px;
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+  z-index:999;
+  cursor:pointer;
+}
+
+.trending-section,
+.stats-section,
+.read-more-section{
+  width:100%;
+  background:white;
+  padding:28px;
+  border-radius:26px;
+  margin-bottom:35px;
+  box-shadow:0 4px 12px rgba(0,0,0,.10);
+}
+
+.trending-section h2,
+.stats-section h2,
+.read-more-section h2{
+  text-align:center;
+  font-size:clamp(28px,4vw,40px);
+  margin-bottom:24px;
+}
+
+.trending-grid,
+.stats-grid,
+.read-more-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:18px;
+}
+
+.trend-card{
+  background:#f5f5f5;
+  padding:20px;
+  border-radius:20px;
+  text-decoration:none;
+  color:#111;
+  border:2px solid #ececec;
+  transition:.3s;
+}
+
+.trend-card:hover{
+  background:#19bff3;
+  color:white;
+  transform:translateY(-4px);
+}
+
+.trend-card h3{
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.trend-card p{
+  font-size:17px;
+  line-height:1.5;
+}
+
+.stat-box{
+  background:#15172d;
+  color:white;
+  padding:24px;
+  border-radius:22px;
+  text-align:center;
+}
+
+.stat-number{
+  font-size:34px;
+  font-weight:900;
+  color:#19bff3;
+  margin-bottom:8px;
+}
+
+.stat-label{
+  font-size:18px;
+  color:#ddd;
+}
+
+.read-card{
+  background:#f5f5f5;
+  border-radius:22px;
+  overflow:hidden;
+  text-decoration:none;
+  color:#111;
+  border:2px solid #ececec;
+  transition:.3s;
+}
+
+.read-card:hover{
+  transform:scale(1.02);
+}
+
+.read-card img{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+}
+
+.read-card h3{
+  padding:16px 16px 8px;
+  font-size:22px;
+}
+
+.read-card p{
+  padding:0 16px 18px;
+  font-size:17px;
+  line-height:1.5;
+  color:#444;
+}
+
+.comment-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:12px;
+}
+
+.avatar{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:#19bff3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  font-weight:900;
+  color:white;
+  box-shadow:0 4px 10px rgba(0,0,0,.18);
+}
+
+body.dark-mode{
+  background:#0f111f;
+  color:#fff;
+}
+
+body.dark-mode .search,
+body.dark-mode .article,
+body.dark-mode .related,
+body.dark-mode .community-section,
+body.dark-mode .trust-section,
+body.dark-mode .trending-section,
+body.dark-mode .stats-section,
+body.dark-mode .read-more-section{
+  background:#171a2f;
+  color:white;
+}
+
+body.dark-mode .article p,
+body.dark-mode .comment-box p,
+body.dark-mode .trust-box p,
+body.dark-mode .read-card p,
+body.dark-mode .trend-card p{
+  color:#ddd;
+}
+
+body.dark-mode .comment-box,
+body.dark-mode .trust-box,
+body.dark-mode .trend-card,
+body.dark-mode .read-card,
+body.dark-mode .related a{
+  background:#232747;
+  border-color:#33385c;
+  color:white;
+}
+
+body.dark-mode .search input{
+  color:white;
+}
+
+body.dark-mode .search input::placeholder{
+  color:#bbb;
+}
+
+body.dark-mode .menu{
+  background:#171a2f;
+  color:white;
+}
+
+body.dark-mode .menu-panel{
+  background:#171a2f;
+}
+
+body.dark-mode .menu-panel a{
+  color:white;
+}
+
+body.dark-mode .dark-toggle{
+  background:white;
+  color:#111;
+}
+
 .menu{
   position:fixed;
   right:18px;
@@ -524,7 +732,214 @@ main{
     font-size:17px;
   }
 
-  .menu{
+  
+.dark-toggle{
+  position:fixed;
+  left:18px;
+  bottom:18px;
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  border:none;
+  background:#15172d;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:32px;
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+  z-index:999;
+  cursor:pointer;
+}
+
+.trending-section,
+.stats-section,
+.read-more-section{
+  width:100%;
+  background:white;
+  padding:28px;
+  border-radius:26px;
+  margin-bottom:35px;
+  box-shadow:0 4px 12px rgba(0,0,0,.10);
+}
+
+.trending-section h2,
+.stats-section h2,
+.read-more-section h2{
+  text-align:center;
+  font-size:clamp(28px,4vw,40px);
+  margin-bottom:24px;
+}
+
+.trending-grid,
+.stats-grid,
+.read-more-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:18px;
+}
+
+.trend-card{
+  background:#f5f5f5;
+  padding:20px;
+  border-radius:20px;
+  text-decoration:none;
+  color:#111;
+  border:2px solid #ececec;
+  transition:.3s;
+}
+
+.trend-card:hover{
+  background:#19bff3;
+  color:white;
+  transform:translateY(-4px);
+}
+
+.trend-card h3{
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.trend-card p{
+  font-size:17px;
+  line-height:1.5;
+}
+
+.stat-box{
+  background:#15172d;
+  color:white;
+  padding:24px;
+  border-radius:22px;
+  text-align:center;
+}
+
+.stat-number{
+  font-size:34px;
+  font-weight:900;
+  color:#19bff3;
+  margin-bottom:8px;
+}
+
+.stat-label{
+  font-size:18px;
+  color:#ddd;
+}
+
+.read-card{
+  background:#f5f5f5;
+  border-radius:22px;
+  overflow:hidden;
+  text-decoration:none;
+  color:#111;
+  border:2px solid #ececec;
+  transition:.3s;
+}
+
+.read-card:hover{
+  transform:scale(1.02);
+}
+
+.read-card img{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+}
+
+.read-card h3{
+  padding:16px 16px 8px;
+  font-size:22px;
+}
+
+.read-card p{
+  padding:0 16px 18px;
+  font-size:17px;
+  line-height:1.5;
+  color:#444;
+}
+
+.comment-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:12px;
+}
+
+.avatar{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:#19bff3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  font-weight:900;
+  color:white;
+  box-shadow:0 4px 10px rgba(0,0,0,.18);
+}
+
+body.dark-mode{
+  background:#0f111f;
+  color:#fff;
+}
+
+body.dark-mode .search,
+body.dark-mode .article,
+body.dark-mode .related,
+body.dark-mode .community-section,
+body.dark-mode .trust-section,
+body.dark-mode .trending-section,
+body.dark-mode .stats-section,
+body.dark-mode .read-more-section{
+  background:#171a2f;
+  color:white;
+}
+
+body.dark-mode .article p,
+body.dark-mode .comment-box p,
+body.dark-mode .trust-box p,
+body.dark-mode .read-card p,
+body.dark-mode .trend-card p{
+  color:#ddd;
+}
+
+body.dark-mode .comment-box,
+body.dark-mode .trust-box,
+body.dark-mode .trend-card,
+body.dark-mode .read-card,
+body.dark-mode .related a{
+  background:#232747;
+  border-color:#33385c;
+  color:white;
+}
+
+body.dark-mode .search input{
+  color:white;
+}
+
+body.dark-mode .search input::placeholder{
+  color:#bbb;
+}
+
+body.dark-mode .menu{
+  background:#171a2f;
+  color:white;
+}
+
+body.dark-mode .menu-panel{
+  background:#171a2f;
+}
+
+body.dark-mode .menu-panel a{
+  color:white;
+}
+
+body.dark-mode .dark-toggle{
+  background:white;
+  color:#111;
+}
+
+.menu{
     width:62px;
     height:62px;
     font-size:32px;
@@ -576,6 +991,62 @@ onkeydown="if(event.key==='Enter'){buscar()}"
 <button onclick="buscar()">🔎</button>
 
 </div>
+
+
+<section class="trending-section">
+
+<h2>🔥 Tendencias Roblox</h2>
+
+<div class="trending-grid">
+
+<a href="eventos.html" class="trend-card">
+<h3>🎁 Eventos activos</h3>
+<p>Revisa novedades, recompensas y eventos populares dentro de Roblox.</p>
+</a>
+
+<a href="nuevos-codigos.html" class="trend-card">
+<h3>⭐ Nuevos códigos</h3>
+<p>Aprende cómo identificar promociones oficiales y evitar sitios falsos.</p>
+</a>
+
+<a href="seguridad.html" class="trend-card">
+<h3>🔐 Seguridad</h3>
+<p>Consejos para proteger tu cuenta, contraseña y datos personales.</p>
+</a>
+
+<a href="robux-gift.html" class="trend-card">
+<h3>💳 Gift Cards</h3>
+<p>Guía rápida para entender tarjetas oficiales y métodos seguros.</p>
+</a>
+
+</div>
+
+</section>
+
+<section class="stats-section">
+
+<h2>📊 Actividad de Zensablox</h2>
+
+<div class="stats-grid">
+
+<div class="stat-box">
+<div class="stat-number" id="statUsuarios">12,548</div>
+<div class="stat-label">usuarios online</div>
+</div>
+
+<div class="stat-box">
+<div class="stat-number" id="statGuias">8,932</div>
+<div class="stat-label">guías vistas hoy</div>
+</div>
+
+<div class="stat-box">
+<div class="stat-number" id="statEventos">3,421</div>
+<div class="stat-label">eventos revisados</div>
+</div>
+
+</div>
+
+</section>
 
 <div class="articles-grid">
 
@@ -659,22 +1130,34 @@ onkeydown="if(event.key==='Enter'){buscar()}"
 <div class="community-grid">
 
 <div class="comment-box">
+<div class="comment-head">
+<div class="avatar">A</div>
 <div class="comment-user">🟢 AndresGamer</div>
+</div>
 <p>“La guía de seguridad me ayudó muchísimo a proteger mi cuenta.”</p>
 </div>
 
 <div class="comment-box">
+<div class="comment-head">
+<div class="avatar">L</div>
 <div class="comment-user">🟢 LunaBlox</div>
+</div>
 <p>“Ahora entiendo mejor cómo funcionan los eventos oficiales.”</p>
 </div>
 
 <div class="comment-box">
+<div class="comment-head">
+<div class="avatar">Z</div>
 <div class="comment-user">🟢 ZetaPlayer</div>
+</div>
 <p>“Me gustó la parte de Gift Cards y promociones seguras.”</p>
 </div>
 
 <div class="comment-box">
+<div class="comment-head">
+<div class="avatar">M</div>
 <div class="comment-user">🟢 MaxRoblox</div>
+</div>
 <p>“La web carga súper rápido en mi celular 😎”</p>
 </div>
 
@@ -687,6 +1170,35 @@ onkeydown="if(event.key==='Enter'){buscar()}"
 <div class="live-item">🟢 PlayerMax leyendo eventos Roblox</div>
 <div class="live-item">🟢 LunaGamer revisando seguridad</div>
 <div class="live-item">🟢 ZensPlayer viendo promociones</div>
+
+</div>
+
+</section>
+
+
+<section class="read-more-section">
+
+<h2>📰 Sigue leyendo</h2>
+
+<div class="read-more-grid">
+
+<a href="seguridad.html" class="read-card">
+<img loading="lazy" src="seguridad.jpeg" alt="Seguridad Roblox">
+<h3>Protege tu cuenta de Roblox</h3>
+<p>Aprende los consejos más importantes para evitar robos y páginas falsas.</p>
+</a>
+
+<a href="eventos.html" class="read-card">
+<img loading="lazy" src="codigos.jpeg" alt="Códigos Roblox">
+<h3>Códigos y recompensas</h3>
+<p>Revisa información útil sobre códigos promocionales y eventos disponibles.</p>
+</a>
+
+<a href="robux-gift.html" class="read-card">
+<img loading="lazy" src="robux-gift.jpeg" alt="Gift Cards Roblox">
+<h3>Gift Cards y Robux</h3>
+<p>Conoce cómo funcionan las tarjetas oficiales y métodos seguros.</p>
+</a>
 
 </div>
 
@@ -740,6 +1252,8 @@ Nunca pediremos tu contraseña, datos privados ni acceso a tu cuenta.
 </section>
 
 </main>
+
+<button class="dark-toggle" onclick="toggleDarkMode()" id="darkToggle">🌙</button>
 
 <div class="menu" onclick="abrirMenu()">☰</div>
 
@@ -870,61 +1384,73 @@ const comentarios = [
 
 {
 nombre:"🟢 ShadowBlox",
+avatar:"S",
 texto:"“Los artículos están súper fáciles de entender.”"
 },
 
 {
 nombre:"🟢 RobuxMaster",
+avatar:"R",
 texto:"“La sección de promociones me ayudó bastante 🔥”"
 },
 
 {
 nombre:"🟢 LunaPlayer",
+avatar:"L",
 texto:"“Me encantó el diseño de la web 😍”"
 },
 
 {
 nombre:"🟢 AlexGamer",
+avatar:"A",
 texto:"“Ahora entiendo cómo funcionan los eventos oficiales.”"
 },
 
 {
 nombre:"🟢 ZetaBlox",
+avatar:"Z",
 texto:"“La web va súper rápida en mi teléfono.”"
 },
 
 {
 nombre:"🟢 MegaRoblox",
+avatar:"M",
 texto:"“Muy buena información sobre seguridad.”"
 },
 
 {
 nombre:"🟢 PlayerX",
+avatar:"P",
 texto:"“Las Gift Cards explicadas súper bien.”"
 },
 
 {
 nombre:"🟢 DarkBlox",
+avatar:"D",
 texto:"“Me gustó mucho la parte de promociones.”"
 },
 
 {
 nombre:"🟢 UltraPlayer",
+avatar:"U",
 texto:"“Ahora sé detectar páginas falsas 😎”"
 },
 
 {
 nombre:"🟢 RayoGamer",
+avatar:"R",
 texto:"“Me sirvió para revisar eventos sin caer en páginas raras.”"
 },
 
 {
 nombre:"🟢 BloxFan",
+avatar:"B",
 texto:"“Está buena la parte de códigos seguros.”"
 },
 
 {
 nombre:"🟢 NovaPlayer",
+avatar:"N",
 texto:"“La web se ve clara y fácil de usar.”"
 }
 
@@ -944,6 +1470,9 @@ random.nombre;
 
 caja.querySelector("p").innerHTML =
 random.texto;
+
+let avatar = caja.querySelector(".avatar");
+if(avatar){ avatar.innerHTML = random.avatar; }
 
 });
 
@@ -981,6 +1510,50 @@ usuariosLive[Math.floor(Math.random()*usuariosLive.length)];
 }
 
 setInterval(cambiarLive,3000);
+
+
+function toggleDarkMode(){
+
+document.body.classList.toggle("dark-mode");
+
+if(document.body.classList.contains("dark-mode")){
+  localStorage.setItem("modoOscuro","si");
+  document.getElementById("darkToggle").innerHTML = "☀️";
+}
+
+else{
+  localStorage.setItem("modoOscuro","no");
+  document.getElementById("darkToggle").innerHTML = "🌙";
+}
+
+}
+
+if(localStorage.getItem("modoOscuro") === "si"){
+  document.body.classList.add("dark-mode");
+  setTimeout(()=>{
+    document.getElementById("darkToggle").innerHTML = "☀️";
+  },100);
+}
+
+setInterval(()=>{
+
+let usuarios = document.getElementById("statUsuarios");
+let guias = document.getElementById("statGuias");
+let eventos = document.getElementById("statEventos");
+
+if(usuarios && guias && eventos){
+
+let u = parseInt(usuarios.innerHTML.replace(/,/g,"")) + Math.floor(Math.random()*5);
+let g = parseInt(guias.innerHTML.replace(/,/g,"")) + Math.floor(Math.random()*8);
+let e = parseInt(eventos.innerHTML.replace(/,/g,"")) + Math.floor(Math.random()*4);
+
+usuarios.innerHTML = u.toLocaleString();
+guias.innerHTML = g.toLocaleString();
+eventos.innerHTML = e.toLocaleString();
+
+}
+
+},4000);
 
 </script>
 
