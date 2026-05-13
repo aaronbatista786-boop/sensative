@@ -1,16 +1,23 @@
  <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Zensablox</title>
 
+<meta name="description" content="Zensablox - Guías, eventos, códigos y consejos seguros sobre Roblox.">
+<meta name="keywords" content="Roblox, Robux, códigos Roblox, eventos Roblox, Zensablox">
+<meta name="author" content="Zensablox">
+
 <style>
+
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
 }
 
 body{
@@ -23,6 +30,9 @@ header{
   padding:25px 10px;
   text-align:center;
   box-shadow:0 4px 15px rgba(0,0,0,.2);
+  position:sticky;
+  top:0;
+  z-index:100;
 }
 
 .logo{
@@ -71,10 +81,6 @@ main{
   color:#333;
 }
 
-.search input::placeholder{
-  color:#777;
-}
-
 .search button{
   border:none;
   background:none;
@@ -91,12 +97,15 @@ main{
   box-shadow:0 4px 12px rgba(0,0,0,.10);
   text-decoration:none;
   color:inherit;
+  transition:.2s;
+}
+
+.article:hover{
+  transform:scale(1.01);
 }
 
 .article img{
   width:100%;
-  height:auto;
-  display:block;
   border-radius:20px;
   margin-bottom:20px;
 }
@@ -118,8 +127,8 @@ main{
   position:fixed;
   right:18px;
   bottom:18px;
-  width:70px;
-  height:70px;
+  width:72px;
+  height:72px;
   border-radius:50%;
   background:white;
   display:flex;
@@ -127,6 +136,30 @@ main{
   justify-content:center;
   font-size:38px;
   box-shadow:0 6px 18px rgba(0,0,0,.25);
+  z-index:999;
+  cursor:pointer;
+}
+
+.menu-panel{
+  position:fixed;
+  right:18px;
+  bottom:105px;
+  background:white;
+  width:240px;
+  border-radius:22px;
+  padding:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.18);
+  display:none;
+  flex-direction:column;
+  gap:14px;
+  z-index:999;
+}
+
+.menu-panel a{
+  text-decoration:none;
+  color:#111;
+  font-size:22px;
+  font-weight:bold;
 }
 
 .footer{
@@ -147,11 +180,6 @@ main{
   text-decoration:none;
   font-size:24px;
   font-weight:300;
-  transition:.2s;
-}
-
-.footer-links a:hover{
-  opacity:.7;
 }
 
 .copyright{
@@ -163,32 +191,56 @@ main{
 
 .copyright strong{
   font-size:28px;
-  font-weight:900;
 }
 
-@media (max-width:480px){
+.disclaimer{
+  margin-top:25px;
+  color:#bbb;
+  font-size:16px;
+  line-height:1.5;
+}
+
+.cookies{
+  position:fixed;
+  left:15px;
+  right:15px;
+  bottom:15px;
+  background:#111;
+  color:white;
+  padding:20px;
+  border-radius:20px;
+  z-index:1000;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.cookies button{
+  border:none;
+  background:#19bff3;
+  color:white;
+  padding:14px;
+  border-radius:14px;
+  font-size:18px;
+  font-weight:bold;
+}
+
+@media(max-width:480px){
 
   .logo{
     font-size:40px;
   }
 
-  .counter{
-    font-size:18px;
-  }
-
-  main{
-    padding:18px;
-  }
-
   .article h2{
-    font-size:32px;
+    font-size:30px;
   }
 
   .article p{
-    font-size:22px;
+    font-size:21px;
   }
 
 }
+
 </style>
 </head>
 
@@ -196,183 +248,181 @@ main{
 
 <header>
 
-  <div class="logo">Zensablox</div>
+<div class="logo">Zensablox</div>
 
-  <div class="counter" id="contador">
-    👥 12,548 Usuarios Online
-  </div>
+<div class="counter" id="contador">
+👥 12,548 Usuarios Online
+</div>
 
 </header>
 
 <main>
 
-  <div class="search">
-    <input type="text" id="buscador" placeholder="Buscar" onkeydown="if(event.key==='Enter'){buscar()}">
-    <button onclick="buscar()">🔎</button>
-  </div>
+<div class="search">
 
-  <a href="robux.html" class="article">
-    <img src="robux.jpeg.jpeg" alt="Robux gratis Roblox">
-    <h2>Cómo Conseguir Robux Gratis en Roblox Legalmente</h2>
-    <p>¿Quieres Robux sin arriesgar tu cuenta? Mira esta guía con métodos seguros, eventos oficiales y recompensas reales dentro de Roblox.</p>
-  </a>
+<input
+type="text"
+id="buscador"
+placeholder="Buscar"
+onkeydown="if(event.key==='Enter'){buscar()}"
+>
 
-  <a href="eventos.html" class="article">
-    <img src="codigos.jpeg" alt="Códigos Roblox">
-    <h2>Códigos y Recompensas Disponibles en Roblox</h2>
-    <p>Lista actualizada de códigos promocionales, objetos gratis y recompensas que puedes revisar dentro de Roblox.</p>
-  </a>
+<button onclick="buscar()">🔎</button>
 
-  <a href="recompensas.html" class="article">
-    <img src="recompensas.jpeg" alt="Juegos y eventos Roblox">
-    <h2>Juegos y Eventos Virales de Roblox</h2>
-    <p>Descubre juegos populares, novedades, actualizaciones y eventos virales que están llamando la atención en la comunidad.</p>
-  </a>
+</div>
 
-  <a href="seguridad.html" class="article">
-    <img src="seguridad.jpeg" alt="Seguridad Roblox">
-    <h2>Cómo Proteger tu Cuenta de Roblox</h2>
-    <p>Aprende consejos importantes para evitar estafas, proteger tu cuenta y jugar con más seguridad.</p>
-  </a>
+<a href="robux.html" class="article">
+<img src="robux.jpeg.jpeg">
+<h2>Cómo Conseguir Robux Gratis en Roblox Legalmente</h2>
+<p>Descubre métodos seguros, recompensas oficiales y consejos reales dentro de Roblox.</p>
+</a>
 
-  <a href="codigo-secreto.html" class="article">
-    <img src="codigo-secreto.jpeg" alt="Código secreto Roblox">
-    <h2>Códigos Secretos en Roblox</h2>
-    <p>Aprende cómo identificar códigos reales, promociones oficiales y evitar enlaces falsos que prometen recompensas.</p>
-  </a>
+<a href="eventos.html" class="article">
+<img src="codigos.jpeg">
+<h2>Códigos y Recompensas Disponibles en Roblox</h2>
+<p>Revisa códigos promocionales, objetos gratis y recompensas activas.</p>
+</a>
 
-  <a href="nuevos-codigos.html" class="article">
-    <img src="nuevos-codigos.jpeg" alt="Nuevos códigos Roblox">
-    <h2>Nuevos Códigos y Promociones</h2>
-    <p>Revisa consejos para encontrar códigos oficiales, eventos activos y recompensas seguras dentro de Roblox.</p>
-  </a>
+<a href="recompensas.html" class="article">
+<img src="recompensas.jpeg">
+<h2>Juegos y Eventos Virales de Roblox</h2>
+<p>Conoce los juegos más populares y eventos virales de la comunidad.</p>
+</a>
 
-  <a href="robux-gift.html" class="article">
-    <img src="robux-gift.jpeg" alt="Tarjetas y Robux Roblox">
-    <h2>Tarjetas, Gift Cards y Robux</h2>
-    <p>Conoce cómo funcionan las tarjetas de regalo, los métodos oficiales de Robux y las formas seguras de comprar.</p>
-  </a>
+<a href="seguridad.html" class="article">
+<img src="seguridad.jpeg">
+<h2>Cómo Proteger tu Cuenta de Roblox</h2>
+<p>Consejos importantes para mantener tu cuenta segura y evitar estafas.</p>
+</a>
 
-  <a href="robux-cuenta.html" class="article">
-    <img src="robux-cuenta.jpeg" alt="Robux en cuenta Roblox">
-    <h2>Cómo Cuidar tus Robux y tu Cuenta</h2>
-    <p>Consejos para proteger tu saldo, evitar engaños y mantener tu cuenta segura dentro de Roblox.</p>
-  </a>
+<a href="codigo-secreto.html" class="article">
+<img src="codigo-secreto.jpeg">
+<h2>Códigos Secretos en Roblox</h2>
+<p>Aprende cómo reconocer promociones oficiales y evitar páginas falsas.</p>
+</a>
 
-  <a href="reclamar-robux.html" class="article">
-    <img src="reclamar-robux.jpeg" alt="Recompensas Roblox">
-    <h2>Recompensas y Eventos Oficiales</h2>
-    <p>Aprende a diferenciar eventos reales de páginas falsas y revisa cómo funcionan las recompensas oficiales.</p>
-  </a>
+<a href="nuevos-codigos.html" class="article">
+<img src="nuevos-codigos.jpeg">
+<h2>Nuevos Códigos y Promociones</h2>
+<p>Encuentra información sobre eventos activos y promociones seguras.</p>
+</a>
+
+<a href="robux-gift.html" class="article">
+<img src="robux-gift.jpeg">
+<h2>Tarjetas, Gift Cards y Robux</h2>
+<p>Conoce cómo funcionan las tarjetas oficiales y métodos seguros.</p>
+</a>
+
+<a href="robux-cuenta.html" class="article">
+<img src="robux-cuenta.jpeg">
+<h2>Cómo Cuidar tus Robux y tu Cuenta</h2>
+<p>Protege tu saldo y evita engaños comunes en Roblox.</p>
+</a>
+
+<a href="reclamar-robux.html" class="article">
+<img src="reclamar-robux.jpeg">
+<h2>Recompensas y Eventos Oficiales</h2>
+<p>Aprende a identificar eventos oficiales y páginas confiables.</p>
+</a>
 
 </main>
 
-<div class="menu">☰</div>
+<div class="menu" onclick="abrirMenu()">☰</div>
+
+<div class="menu-panel" id="menuPanel">
+
+<a href="index.html">Inicio</a>
+<a href="eventos.html">Eventos</a>
+<a href="seguridad.html">Seguridad</a>
+<a href="contacto.html">Contacto</a>
+
+</div>
 
 <footer class="footer">
 
-  <div class="footer-links">
-    <a href="aviso-legal.html">Aviso Legal</a>
-    <a href="contacto.html">Contacto</a>
-    <a href="cookies.html">Política de Cookies</a>
-    <a href="privacidad.html">Privacidad</a>
-    <a href="quienes-somos.html">Quienes Somos</a>
-  </div>
+<div class="footer-links">
 
-  <p class="copyright">
-    Copyright © 2026 <strong>Zensablox</strong>
-  </p>
+<a href="aviso-legal.html">Aviso Legal</a>
+<a href="contacto.html">Contacto</a>
+<a href="cookies.html">Política de Cookies</a>
+<a href="privacidad.html">Privacidad</a>
+<a href="quienes-somos.html">Quienes Somos</a>
+
+</div>
+
+<p class="copyright">
+Copyright © 2026 <strong>Zensablox</strong>
+</p>
+
+<p class="disclaimer">
+Zensablox no está afiliado ni relacionado oficialmente con Roblox Corporation.
+</p>
 
 </footer>
 
+<div class="cookies" id="cookies">
+
+<div>
+Usamos cookies para mejorar tu experiencia dentro de Zensablox.
+</div>
+
+<button onclick="aceptarCookies()">
+Aceptar
+</button>
+
+</div>
+
 <script>
 
-function buscar(){
+function abrirMenu(){
 
-  let texto = document.getElementById("buscador").value.toLowerCase();
+  let panel = document.getElementById("menuPanel");
 
-  if(texto.includes("robux") || texto.includes("roblox gratis")){
-    window.location.href = "robux.html";
-  }
-
-  else if(
-    texto.includes("codigo") ||
-    texto.includes("código") ||
-    texto.includes("codigos") ||
-    texto.includes("códigos") ||
-    texto.includes("recompensa") ||
-    texto.includes("recompensas")
-  ){
-    window.location.href = "eventos.html";
-  }
-
-  else if(
-    texto.includes("evento") ||
-    texto.includes("eventos") ||
-    texto.includes("juego") ||
-    texto.includes("juegos") ||
-    texto.includes("viral") ||
-    texto.includes("virales")
-  ){
-    window.location.href = "recompensas.html";
-  }
-
-  else if(
-    texto.includes("seguridad") ||
-    texto.includes("hack") ||
-    texto.includes("hacker") ||
-    texto.includes("cuenta") ||
-    texto.includes("proteger")
-  ){
-    window.location.href = "seguridad.html";
-  }
-
-  else if(
-    texto.includes("secreto") ||
-    texto.includes("codigo secreto") ||
-    texto.includes("código secreto")
-  ){
-    window.location.href = "codigo-secreto.html";
-  }
-
-  else if(
-    texto.includes("nuevos codigos") ||
-    texto.includes("nuevos códigos") ||
-    texto.includes("promocion") ||
-    texto.includes("promoción") ||
-    texto.includes("promociones")
-  ){
-    window.location.href = "nuevos-codigos.html";
-  }
-
-  else if(
-    texto.includes("gift") ||
-    texto.includes("gift card") ||
-    texto.includes("tarjeta") ||
-    texto.includes("tarjetas")
-  ){
-    window.location.href = "robux-gift.html";
-  }
-
-  else if(
-    texto.includes("saldo") ||
-    texto.includes("mis robux") ||
-    texto.includes("robux cuenta")
-  ){
-    window.location.href = "robux-cuenta.html";
-  }
-
-  else if(
-    texto.includes("reclamar") ||
-    texto.includes("oficial") ||
-    texto.includes("oficiales")
-  ){
-    window.location.href = "reclamar-robux.html";
+  if(panel.style.display === "flex"){
+    panel.style.display = "none";
   }
 
   else{
-    alert("No encontramos un apartado relacionado 😅");
+    panel.style.display = "flex";
   }
+
+}
+
+function aceptarCookies(){
+
+  document.getElementById("cookies").style.display = "none";
+
+  localStorage.setItem("cookiesAceptadas","si");
+
+}
+
+if(localStorage.getItem("cookiesAceptadas")){
+  document.getElementById("cookies").style.display = "none";
+}
+
+function buscar(){
+
+let texto = document.getElementById("buscador").value.toLowerCase();
+
+if(texto.includes("robux")){
+window.location.href="robux.html";
+}
+
+else if(texto.includes("codigo") || texto.includes("código")){
+window.location.href="eventos.html";
+}
+
+else if(texto.includes("seguridad")){
+window.location.href="seguridad.html";
+}
+
+else if(texto.includes("evento")){
+window.location.href="recompensas.html";
+}
+
+else{
+alert("No encontramos resultados 😅");
+}
 
 }
 
@@ -380,10 +430,10 @@ let numero = 12548;
 
 setInterval(()=>{
 
-  numero += Math.floor(Math.random()*6);
+numero += Math.floor(Math.random()*6);
 
-  document.getElementById("contador").innerHTML =
-  "👥 " + numero.toLocaleString() + " Usuarios Online";
+document.getElementById("contador").innerHTML =
+"👥 " + numero.toLocaleString() + " Usuarios Online";
 
 },3000);
 
