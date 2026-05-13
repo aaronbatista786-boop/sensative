@@ -177,6 +177,69 @@ main{
   color:white;
 }
 
+.community-section{
+  width:100%;
+  background:white;
+  padding:28px;
+  border-radius:26px;
+  margin-top:45px;
+  box-shadow:0 4px 12px rgba(0,0,0,.10);
+}
+
+.community-section h2{
+  text-align:center;
+  font-size:clamp(28px,4vw,40px);
+  margin-bottom:28px;
+}
+
+.community-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+
+.comment-box{
+  background:#f5f5f5;
+  padding:22px;
+  border-radius:20px;
+  border:2px solid #ececec;
+}
+
+.comment-user{
+  font-size:22px;
+  font-weight:900;
+  color:#13a538;
+  margin-bottom:12px;
+}
+
+.comment-box p{
+  font-size:18px;
+  line-height:1.5;
+  color:#444;
+}
+
+.live-users{
+  margin-top:35px;
+  background:#15172d;
+  padding:24px;
+  border-radius:22px;
+  color:white;
+}
+
+.live-users h3{
+  margin-bottom:18px;
+  font-size:28px;
+}
+
+.live-item{
+  background:rgba(255,255,255,.10);
+  padding:16px;
+  border-radius:16px;
+  margin-bottom:12px;
+  font-size:18px;
+  font-weight:bold;
+}
+
 .menu{
   position:fixed;
   right:18px;
@@ -353,8 +416,18 @@ main{
     border-radius:16px;
   }
 
-  .related{
+  .related,
+  .community-section{
     padding:18px;
+  }
+
+  .comment-user{
+    font-size:20px;
+  }
+
+  .comment-box p,
+  .live-item{
+    font-size:17px;
   }
 
   .menu{
@@ -480,6 +553,54 @@ onkeydown="if(event.key==='Enter'){buscar()}"
 <a href="recompensas.html">🔥 Mira eventos virales de Roblox</a>
 <a href="codigo-secreto.html">🧩 Cómo detectar códigos falsos</a>
 <a href="nuevos-codigos.html">⭐ Nuevas promociones seguras</a>
+
+</div>
+
+</section>
+
+<section class="community-section">
+
+<h2>💬 Comunidad Zensablox</h2>
+
+<div class="community-grid">
+
+<div class="comment-box">
+<div class="comment-user">🟢 AndresGamer</div>
+<p>
+“La guía de seguridad me ayudó muchísimo a proteger mi cuenta.”
+</p>
+</div>
+
+<div class="comment-box">
+<div class="comment-user">🟢 LunaBlox</div>
+<p>
+“Ahora entiendo mejor cómo funcionan los eventos oficiales.”
+</p>
+</div>
+
+<div class="comment-box">
+<div class="comment-user">🟢 ZetaPlayer</div>
+<p>
+“Me gustó la parte de Gift Cards y promociones seguras.”
+</p>
+</div>
+
+<div class="comment-box">
+<div class="comment-user">🟢 MaxRoblox</div>
+<p>
+“La web carga súper rápido en mi celular 😎”
+</p>
+</div>
+
+</div>
+
+<div class="live-users">
+
+<h3>🔥 Usuarios viendo ahora</h3>
+
+<div class="live-item">🟢 PlayerMax leyendo eventos Roblox</div>
+<div class="live-item">🟢 LunaGamer revisando seguridad</div>
+<div class="live-item">🟢 ZensPlayer viendo promociones</div>
 
 </div>
 
