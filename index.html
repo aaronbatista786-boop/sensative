@@ -203,6 +203,11 @@ main{
   padding:22px;
   border-radius:20px;
   border:2px solid #ececec;
+  transition:.3s;
+}
+
+.comment-box:hover{
+  transform:scale(1.02);
 }
 
 .comment-user{
@@ -566,30 +571,22 @@ onkeydown="if(event.key==='Enter'){buscar()}"
 
 <div class="comment-box">
 <div class="comment-user">🟢 AndresGamer</div>
-<p>
-“La guía de seguridad me ayudó muchísimo a proteger mi cuenta.”
-</p>
+<p>“La guía de seguridad me ayudó muchísimo a proteger mi cuenta.”</p>
 </div>
 
 <div class="comment-box">
 <div class="comment-user">🟢 LunaBlox</div>
-<p>
-“Ahora entiendo mejor cómo funcionan los eventos oficiales.”
-</p>
+<p>“Ahora entiendo mejor cómo funcionan los eventos oficiales.”</p>
 </div>
 
 <div class="comment-box">
 <div class="comment-user">🟢 ZetaPlayer</div>
-<p>
-“Me gustó la parte de Gift Cards y promociones seguras.”
-</p>
+<p>“Me gustó la parte de Gift Cards y promociones seguras.”</p>
 </div>
 
 <div class="comment-box">
 <div class="comment-user">🟢 MaxRoblox</div>
-<p>
-“La web carga súper rápido en mi celular 😎”
-</p>
+<p>“La web carga súper rápido en mi celular 😎”</p>
 </div>
 
 </div>
@@ -732,6 +729,122 @@ document.getElementById("contador").innerHTML =
 "👥 " + numero.toLocaleString() + " Usuarios Online";
 
 },3000);
+
+const comentarios = [
+
+{
+nombre:"🟢 ShadowBlox",
+texto:"“Los artículos están súper fáciles de entender.”"
+},
+
+{
+nombre:"🟢 RobuxMaster",
+texto:"“La sección de promociones me ayudó bastante 🔥”"
+},
+
+{
+nombre:"🟢 LunaPlayer",
+texto:"“Me encantó el diseño de la web 😍”"
+},
+
+{
+nombre:"🟢 AlexGamer",
+texto:"“Ahora entiendo cómo funcionan los eventos oficiales.”"
+},
+
+{
+nombre:"🟢 ZetaBlox",
+texto:"“La web va súper rápida en mi teléfono.”"
+},
+
+{
+nombre:"🟢 MegaRoblox",
+texto:"“Muy buena información sobre seguridad.”"
+},
+
+{
+nombre:"🟢 PlayerX",
+texto:"“Las Gift Cards explicadas súper bien.”"
+},
+
+{
+nombre:"🟢 DarkBlox",
+texto:"“Me gustó mucho la parte de promociones.”"
+},
+
+{
+nombre:"🟢 UltraPlayer",
+texto:"“Ahora sé detectar páginas falsas 😎”"
+},
+
+{
+nombre:"🟢 RayoGamer",
+texto:"“Me sirvió para revisar eventos sin caer en páginas raras.”"
+},
+
+{
+nombre:"🟢 BloxFan",
+texto:"“Está buena la parte de códigos seguros.”"
+},
+
+{
+nombre:"🟢 NovaPlayer",
+texto:"“La web se ve clara y fácil de usar.”"
+}
+
+];
+
+function cambiarComentarios(){
+
+const cajas = document.querySelectorAll(".comment-box");
+
+cajas.forEach((caja)=>{
+
+const random =
+comentarios[Math.floor(Math.random()*comentarios.length)];
+
+caja.querySelector(".comment-user").innerHTML =
+random.nombre;
+
+caja.querySelector("p").innerHTML =
+random.texto;
+
+});
+
+}
+
+setInterval(cambiarComentarios,5000);
+
+const usuariosLive = [
+
+"🟢 LunaPlayer viendo códigos",
+"🟢 MaxBlox leyendo promociones",
+"🟢 ShadowGamer viendo eventos",
+"🟢 ZensPlayer revisando seguridad",
+"🟢 RobloxHero leyendo Gift Cards",
+"🟢 AndresBlox mirando recompensas",
+"🟢 DarkPlayer revisando artículos",
+"🟢 MegaBlox viendo noticias Roblox",
+"🟢 RayoGamer revisando eventos",
+"🟢 NovaPlayer leyendo seguridad"
+
+];
+
+function cambiarLive(){
+
+const live =
+document.querySelectorAll(".live-item");
+
+live.forEach((item)=>{
+
+item.innerHTML =
+usuariosLive[Math.floor(Math.random()*usuariosLive.length)];
+
+});
+
+}
+
+setInterval(cambiarLive,3000);
 
 </script>
 
