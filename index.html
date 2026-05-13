@@ -245,6 +245,82 @@ main{
   font-weight:bold;
 }
 
+.trust-section{
+  width:100%;
+  background:white;
+  padding:30px;
+  border-radius:28px;
+  margin-top:45px;
+  box-shadow:0 4px 12px rgba(0,0,0,.10);
+}
+
+.trust-section h2{
+  text-align:center;
+  font-size:clamp(30px,4vw,42px);
+  margin-bottom:30px;
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:22px;
+}
+
+.trust-box{
+  background:#f5f5f5;
+  padding:24px;
+  border-radius:22px;
+  border:2px solid #ececec;
+}
+
+.trust-box h3{
+  font-size:24px;
+  margin-bottom:14px;
+}
+
+.trust-box p{
+  font-size:18px;
+  line-height:1.6;
+  color:#444;
+}
+
+.warning-box{
+  margin-top:35px;
+  background:#15172d;
+  color:white;
+  padding:28px;
+  border-radius:24px;
+  text-align:center;
+}
+
+.warning-box h3{
+  font-size:30px;
+  margin-bottom:18px;
+}
+
+.warning-box p{
+  font-size:19px;
+  line-height:1.7;
+  color:#ddd;
+}
+
+.contact-btn{
+  display:inline-block;
+  margin-top:22px;
+  background:#19bff3;
+  color:white;
+  text-decoration:none;
+  padding:16px 30px;
+  border-radius:18px;
+  font-size:20px;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.contact-btn:hover{
+  transform:scale(1.05);
+}
+
 .menu{
   position:fixed;
   right:18px;
@@ -422,7 +498,8 @@ main{
   }
 
   .related,
-  .community-section{
+  .community-section,
+  .trust-section{
     padding:18px;
   }
 
@@ -432,6 +509,18 @@ main{
 
   .comment-box p,
   .live-item{
+    font-size:17px;
+  }
+
+  .warning-box{
+    padding:22px;
+  }
+
+  .warning-box h3{
+    font-size:26px;
+  }
+
+  .warning-box p{
     font-size:17px;
   }
 
@@ -598,6 +687,53 @@ onkeydown="if(event.key==='Enter'){buscar()}"
 <div class="live-item">🟢 PlayerMax leyendo eventos Roblox</div>
 <div class="live-item">🟢 LunaGamer revisando seguridad</div>
 <div class="live-item">🟢 ZensPlayer viendo promociones</div>
+
+</div>
+
+</section>
+
+<section class="trust-section">
+
+<h2>🛡️ ¿Por qué confiar en Zensablox?</h2>
+
+<div class="trust-grid">
+
+<div class="trust-box">
+<h3>🔐 Guías Seguras</h3>
+<p>
+Compartimos información educativa sobre Roblox, seguridad, eventos oficiales y formas responsables de cuidar tu cuenta.
+</p>
+</div>
+
+<div class="trust-box">
+<h3>📚 Contenido Informativo</h3>
+<p>
+Nuestro objetivo es ayudar a la comunidad con artículos claros, útiles y fáciles de entender para jugadores de Roblox.
+</p>
+</div>
+
+<div class="trust-box">
+<h3>✅ Transparencia</h3>
+<p>
+Zensablox no solicita contraseñas, no promete Robux gratis falsos y no reemplaza los canales oficiales de Roblox.
+</p>
+</div>
+
+</div>
+
+<div class="warning-box">
+
+<h3>⚠️ Aviso importante</h3>
+
+<p>
+Zensablox es una web informativa para la comunidad de Roblox.
+No estamos afiliados oficialmente con Roblox Corporation.
+Nunca pediremos tu contraseña, datos privados ni acceso a tu cuenta.
+</p>
+
+<a href="contacto.html" class="contact-btn">
+📩 Contactar
+</a>
 
 </div>
 
