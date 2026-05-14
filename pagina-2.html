@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zensablox - Página 2</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f3f3f3;
+color:#111;
+}
+
+header{
+background:#19bff3;
+padding:25px 10px;
+text-align:center;
+box-shadow:0 4px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+font-size:48px;
+font-weight:900;
+color:white;
+font-style:italic;
+text-shadow:3px 3px 0 #111;
+}
+
+main{
+width:100%;
+max-width:1200px;
+margin:auto;
+padding:24px;
+}
+
+.articles-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:28px;
+}
+
+.article{
+display:block;
+background:white;
+padding:14px;
+border-radius:24px;
+box-shadow:0 4px 12px rgba(0,0,0,.10);
+text-decoration:none;
+color:inherit;
+transition:.2s;
+}
+
+.article:hover{
+transform:scale(1.01);
+}
+
+.article img{
+width:100%;
+aspect-ratio:16/9;
+object-fit:cover;
+border-radius:20px;
+margin-bottom:18px;
+}
+
+.article h2{
+font-size:34px;
+line-height:1.15;
+font-weight:900;
+margin-bottom:12px;
+}
+
+.article p{
+font-size:20px;
+line-height:1.45;
+color:#333;
+}
+
+.pagination{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:14px;
+margin:40px 0 15px;
+}
+
+.page{
+width:52px;
+height:52px;
+border-radius:50%;
+background:white;
+color:#111;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+font-size:22px;
+font-weight:900;
+box-shadow:0 4px 12px rgba(0,0,0,.15);
+border:2px solid #19bff3;
+}
+
+.page.active{
+background:#19bff3;
+color:white;
+}
+
+@media(max-width:768px){
+
+.articles-grid{
+grid-template-columns:1fr;
+}
+
+.article h2{
+font-size:28px;
+}
+
+.article p{
+font-size:18px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Zensablox</div>
+
+</header>
+
+<main>
+
+<div class="articles-grid">
+
+<a href="#" class="article">
+<img src="codigos-2026.jpeg" alt="Códigos Roblox">
+<h2>🟢 Cómo funcionan los códigos promocionales de Roblox en 2026</h2>
+<p>Aprende cómo funcionan los códigos promocionales oficiales, dónde encontrarlos y cómo evitar páginas falsas.</p>
+</a>
+
+<a href="#" class="article">
+<img src="paginas-falsas-robux.jpeg" alt="Páginas falsas Roblox">
+<h2>🔐 Cómo identificar páginas falsas de Robux en Roblox</h2>
+<p>Descubre señales importantes para reconocer sitios inseguros y proteger tu cuenta de Roblox.</p>
+</a>
+
+<a href="#" class="article">
+<img src="ropa-gratis-roblox.jpeg" alt="Ropa gratis Roblox">
+<h2>👕 Cómo conseguir ropa gratis y accesorios en Roblox</h2>
+<p>Conoce eventos, objetos promocionales y accesorios gratuitos disponibles para jugadores de Roblox.</p>
+</a>
+
+<a href="#" class="article">
+<img src="crear-primer-juego.jpeg" alt="Crear juego Roblox">
+<h2>🎮 Guía para crear tu primer juego en Roblox Studio</h2>
+<p>Aprende los primeros pasos para crear mapas, minijuegos y experiencias dentro de Roblox Studio.</p>
+</a>
+
+<a href="#" class="article">
+<img src="secret-skin.jpeg" alt="Skin Roblox">
+<h2>⭐ Skins y accesorios populares de Roblox este mes</h2>
+<p>Mira algunos estilos, skins y accesorios que están siendo populares dentro de la comunidad Roblox.</p>
+</a>
+
+</div>
+
+<div class="pagination">
+
+<a href="index.html" class="page">1</a>
+
+<a href="pagina-2.html" class="page active">2</a>
+
+</div>
+
+</main>
+
+</body>
+</html>
