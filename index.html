@@ -753,7 +753,39 @@ body.dark-mode .dark-toggle{
   z-index:999;
   cursor:pointer;
 }
+.pagination{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:14px;
+margin:40px 0 15px;
+}
 
+.page{
+width:52px;
+height:52px;
+border-radius:50%;
+background:white;
+color:#111;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+font-size:22px;
+font-weight:900;
+box-shadow:0 4px 12px rgba(0,0,0,.15);
+border:2px solid #19bff3;
+transition:.3s;
+}
+
+.page:hover{
+transform:scale(1.08);
+}
+
+.page.active{
+background:#19bff3;
+color:white;
+}
 .trending-section,
 .stats-section,
 .read-more-section{
@@ -764,7 +796,39 @@ body.dark-mode .dark-toggle{
   margin-bottom:35px;
   box-shadow:0 4px 12px rgba(0,0,0,.10);
 }
+.pagination{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:14px;
+margin:40px 0 15px;
+}
 
+.page{
+width:52px;
+height:52px;
+border-radius:50%;
+background:white;
+color:#111;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+font-size:22px;
+font-weight:900;
+box-shadow:0 4px 12px rgba(0,0,0,.15);
+border:2px solid #19bff3;
+transition:.3s;
+}
+
+.page:hover{
+transform:scale(1.08);
+}
+
+.page.active{
+background:#19bff3;
+color:white;
+}
 .trending-section h2,
 .stats-section h2,
 .read-more-section h2{
@@ -1107,7 +1171,13 @@ onkeydown="if(event.key==='Enter'){buscar()}"
 </a>
 
 </div>
+<div class="pagination">
 
+<a href="index.html" class="page active">1</a>
+
+<a href="pagina-2.html" class="page">2</a>
+
+</div>
 <section class="related">
 
 <h3>También te puede interesar</h3>
